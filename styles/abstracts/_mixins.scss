@@ -3,5 +3,29 @@
     @media screen and (min-width:1200px) {
         @content
     }
-}
+};
+
+@mixin responsive768{
+    @media screen and (min-width:768px) and (max-width:1368px) {
+        @content
+    }
+};
+
+@mixin responsive1368{
+    @media screen and (min-width:1368px) {
+        @content
+    }
+};
+
+@mixin Minresponsive768{
+    @media screen and (min-width:768px) {
+        @content
+    }
+};
+
+@mixin responsive1024{
+    @media screen and (min-width:1024px) {
+        @content
+    }
+};
 

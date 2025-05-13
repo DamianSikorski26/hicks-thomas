@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+footer{
+    background-color: #222222;
+    padding: 50px 0;
+    img{
+        height: 90px;margin: auto;
+        margin-bottom: 20px;
+    }
+    .wrapper{
+        max-width: 1400px;
+        width: 90%;
+        margin: auto;
+    }
+    
+}
+.adresses-container{
+    display: grid;
+    grid-template-columns: repeat(10,auto);
+    gap: 50px;
+}
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+    grid-column: span 10;
+    @include Minresponsive768{
+        grid-column: span 5;
+    }
+    @include responsive1024{
+        grid-column: span 2;
+    }
+    a{
+        color: white;
+    }
+    h4{
+        font-size: 24px;
+        font-family: $Poppins;
+        margin-bottom: 15px;
+    }
+    address{
+        font-size: 14px;
+        font-family: $Roboto;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 16px;
+        font-family: $Roboto;
+        margin-bottom: 15px;
+    }
+    
+    a:nth-of-type(2){
+        font-size: 14px;
+        font-family: $Roboto;
+    }
+
+    p:hover, a:nth-of-type(2):hover{
+        text-decoration: underline;
+    }
+}
+
+.footer-column:nth-of-type(5){
+    @include Minresponsive768{
+        grid-column: span 10;
+    }
+    @include responsive1024{
+        grid-column: span 2;
+    }
+}
+
+.Footer-logo-container{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 40px auto;
+    i{
+        color: white;
+        font-size: 30px;
+    }
+}
