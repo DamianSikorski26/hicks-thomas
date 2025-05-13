@@ -1,0 +1,123 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+.Attorney-Cards-Section{
+    background-image: url("/img/bg.svg");
+    .wrapper{
+        max-width: 1400px;
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12,auto);
+        gap:calc(20px);
+        padding-bottom: 50px;
+    }
+    .buttonContainer{
+        width: fit-content;
+        display: none;
+        justify-content: space-between;
+        gap: 20px;
+        margin:50px auto;
+        grid-column: span 12;
+        @include responsive1024{
+            display: flex;
+        }
+        button{
+            padding: 10px 15px;
+            font-size: 14px;
+            font-family: $Roboto;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid black;
+            transition: .3s all linear;
+            cursor: pointer;
+        }
+        button:nth-of-type(1){
+            background-color: #0744AF;
+            border: 1px solid #0744AF;
+            color: white;
+        }
+        button:hover{
+            background-color: #0744AF;
+            color: white;
+            border: 1px solid #0744AF;
+        }
+    }
+}
+
+.Attorney-card{
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include responsive650{
+        grid-column: span 4;
+    }
+    @include responsive1024{
+        grid-column: span 3;
+    }
+    img{
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .3s all linear;
+        overflow: hidden;
+        
+    }
+    img:hover{
+        opacity: 70%;
+    }
+    &-img{
+        background-color: #0744AF;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        margin-bottom: auto;
+    }
+    &-info-box{
+        color: #77777777;
+            
+        padding: 20px 0;
+        h3{
+            font-size: 16px;
+            font-family: $Poppins;
+            color: #0744AF;
+            transition: .3s all linear;
+            text-transform: uppercase;
+            @include Minresponsive768{
+                font-size: 22px;
+            }
+        }
+        h3:hover{
+            color: black;
+            text-decoration: underline;
+        }
+        span{
+            color: #77777777;
+            text-transform: uppercase;
+        }
+        a{
+            color: #77777777;
+            transition: .3s all linear;
+        }
+        a:hover{
+            color: #0744AF;
+            text-decoration: underline;
+        }
+
+    }
+    &-contact{
+        display: flex;
+        flex-direction: column;
+        @include responsive1024{
+            flex-direction: row;
+            gap: 20px;
+        }
+        i{
+            margin-right: 10px;
+        }
+    }
+}
+

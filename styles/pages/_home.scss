@@ -164,11 +164,12 @@
         bottom: 5px;
         left: 50%;
         z-index: 2;
-        background-color: #0f3447;
+        background: linear-gradient(to left,#6e7bee, #000fb8);
         font-size: 14px;
         font-family: $Roboto;
         border-radius: 20px;
         translate: -50% -50%;
+        font-weight: bold;
     }
     
 }

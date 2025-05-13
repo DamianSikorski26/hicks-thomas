@@ -29,3 +29,21 @@
     }
 };
 
+@mixin responsive835{
+    @media screen and (min-width:835px) {
+        @content
+    }
+};
+
+@mixin responsive650{
+    @media screen and (min-width:650px) {
+        @content
+    }
+};
+
+@mixin responsive600{
+    @media screen and (min-width:600px) {
+        @content
+    }
+};
+

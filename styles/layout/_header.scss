@@ -1,12 +1,6 @@
 @use "../abstracts/variables" as *; 
 @use "../abstracts/mixins" as *; 
 
-.header-space{
-   height: calc(100vh - 60px);
-
-
-}
-
 
 .header-img{
     width: 100%;
@@ -128,6 +122,7 @@
     &-nav{
         display: flex;
         gap: 10px;
+        
         justify-content: space-between;
         
         a{
@@ -153,6 +148,27 @@
     }
    
 }
+
+.header-container{
+    background-color: #0744AF;
+    position: relative;
+    
+    .mobileHeader{
+        position: static;
+        
+    }
+    .desktopHeader{
+        position: static;
+        nav{
+            padding-right: 20px;
+            gap: 20px;
+        }
+    }
+    
+    
+}
+
+
 
 
 

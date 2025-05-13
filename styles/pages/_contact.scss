@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.contact-section{
+    background-image: url("/img/bg.svg");
+    h3, h2{
+        text-align: center;
+    }
+    h2{
+        font-size: 24px;
+        font-family: $Poppins;
+        margin-bottom: 8px;
+    }
+    h3{
+        font-size: 22px;
+        font-family: $Roboto;
+        margin-bottom: 24px;
+        color: #555555;
+    }
+    .wrapper{
+        max-width: 1400px;
+        margin: auto;
+        padding: 50px 0;
+        width: 90%;
+    }
+    form{
+        display: grid;
+        grid-template-columns: repeat(12,auto);
+        gap: 15px;
+    }
+    input{
+        padding: 6px 10px;
+    }
+    input:nth-of-type(1){
+        grid-column: span 6;
+        
+    }
+    input:nth-of-type(2){
+        grid-column: span 6;
+        
+    }
+    input:nth-of-type(3){
+        grid-column: span 12;
+        @include responsive600{
+            grid-column: span 6
+        }
+    }
+    input:nth-of-type(4){
+        grid-column: span 12;
+        @include responsive600{
+            grid-column: span 6
+        }
+    }
+    select{
+        grid-column: span 12;
+        padding: 6px 10px;
+    }
+    textarea{
+        grid-column: span 12;
+        height: 70px;
+        padding: 6px 10px;
+    }
+    p{
+        grid-column: span 12;
+        font-size: 15px;
+        font-family: $Roboto;
+        font-style: italic;
+        padding: 10px 1px; 
+    }
+    span{
+        font-weight: bold;
+        color: #555555
+    }
+    input:nth-of-type(5){
+        grid-column: span 12;
+        width: fit-content;
+        margin: auto;
+        font-size: 18px;
+        font-family: $Roboto;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        background-color:  #0744AF;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .3s all linear ;
+
+        
+    }
+    input:nth-of-type(5):hover{
+        background-color: #000000;
+        box-shadow: 5px 5px 15px black;
+    }
+}

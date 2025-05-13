@@ -82,4 +82,128 @@ footer{
         color: white;
         font-size: 30px;
     }
+    i:hover{
+        color: #0744AF;
+    }
 }
+.Footer-disclaimer{
+    font-family: $Roboto;
+    font-size: 14px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+.Footer-last-info{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    color: white;
+    margin: 50px 0;
+    font-size: 14px;
+    font-family: $Roboto;
+    
+    div{
+        width: 100%;
+        text-align: center;
+        grid-column: span 2;
+        @include responsive835{
+            grid-column: span 1;
+            text-align: left;
+        }
+    }
+    div:nth-of-type(2){
+        @include responsive835{
+            
+            text-align: right;
+        }
+    }
+    
+    a{
+        color: white;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+.callBanner{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0744AF;
+    padding: 12px 10px;
+    border-top: 2px solid white;
+    text-align: center;
+    @include responsive650{
+        display: none;
+    }
+    
+    a{
+        color: white;
+        font-size: 18px;
+        font-family: $Roboto;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: .3s all linear;
+    }
+    i{
+        margin-right: 20px;
+        transition: .3s all linear;
+        font-size: 18px;
+        color: white;
+    }
+    i:hover{
+        scale: 130%;
+    }
+    a:hover{
+        color: #eef11f;
+        text-decoration: underline;
+    }
+    z-index: 2;
+
+}
+
+.Stickman{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    background-color: white;
+    
+    border-radius: 200px;
+    
+    border: solid 1px #0744AF;
+    transition: .3s all linear;
+    
+    i{
+        font-size: 45px;
+        position: relative;
+        z-index: 3;
+        color: #0744AF;
+    }
+    &:hover{
+        scale: 110%;
+    }
+    
+    
+    
+    
+}
+.Stickman::before{
+    content: "";
+    position: absolute;
+    top: calc(50%);
+    left: calc(50%);
+    border-radius: 200px;
+    background-color: white;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    translate: -50% -50%;
+    z-index: 1;
+    border: solid 2px #0744AF;
+    
+}
+
+
+
+
+
